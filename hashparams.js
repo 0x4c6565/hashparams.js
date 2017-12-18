@@ -10,7 +10,7 @@ var HashParameters = {
                     continue;
                 }
 
-                this.set(a[0], ((a[1] !== undefined) ? decodeURIComponent(a[1]) : ''));
+                this.set(a[0], ((a[1] !== undefined) ? decodeURIComponent(a[1]) : null));
             }
         }
     },
@@ -36,10 +36,7 @@ var HashParameters = {
         var paramArray = [];
         var obj = this;
         Object.keys(this.hashParams).forEach(function(key,index) {
-            var paramStr = key;
-            if (obj.get(key) !== null) {
-                paramStr += "="+encodeURIComponent(obj.get(key));
-            }
+            var paramStr = (obj.get(key) !== null) ? (key+'='+encodeURIComponent(obj.get(key))) : key;
             paramArray.push(paramStr);
         });
 
