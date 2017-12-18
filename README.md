@@ -8,7 +8,7 @@ A simple library for getting/setting/unsetting query string key-value format has
 
 ### Get
 
-The following ``Get`` examples will use the uri ``https://example.com/test#parameter1=value1&parameter2&parameter3=&parameter4=value4``
+The following ``Get`` examples will use the uri ``https://example.com/test#parameter1=value1&parameter2&parameter3=&parameter4=dfg%24!``
 
 ```js
 HashParameters.get('parameter1');
@@ -23,6 +23,11 @@ HashParameters.get('parameter2');
 ```js
 HashParameters.get('parameter3');
 > ''
+```
+
+```js
+HashParameters.get('parameter4');
+> dfg$!
 ```
 
 ### Set
