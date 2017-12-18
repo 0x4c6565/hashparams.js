@@ -26,8 +26,8 @@ var HashParameters = {
         this.commit();
     },
     unset: function(key) {
-        if (hashParams[key] !== undefined) {
-            delete hashParams[key];
+        if (this.get(key) !== null) {
+            delete this.hashParams[key];
         }
 
         this.commit();
