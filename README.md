@@ -59,7 +59,7 @@ HashParameters.set('parameter4', 'dfg$!');
 
 ### Unset
 
-The following ``Unset`` examples will use the uri ``https://example.com/test#parameter1=value1&parameter2&parameter3=&parameter4=value4``
+The following ``Unset`` examples will use the uri ``https://example.com/test#parameter1=value1&parameter2&parameter3=``
 
 ```js
 HashParameters.unset('parameter2');
