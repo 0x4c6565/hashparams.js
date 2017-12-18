@@ -1,6 +1,6 @@
 # hashparams.js
 
-A simple library for getting/setting/unsetting query-string style format hash parameters e.g.
+A simple library for getting/setting/unsetting query string key-value format hash parameters e.g.
 
 ``https://example.com/test#parameter1=value1&parameter2&parameter3=&parameter4=value4``
 
