@@ -1,14 +1,14 @@
 # hashparams.js
 
-A simple library for getting/setting/unsetting has parameters e.g.
+A simple library for getting/setting/unsetting query-string style format hash parameters e.g.
 
-``example.com/test#parameter1=value1&parameter2&parameter3=&parameter4=value4``
+``https://example.com/test#parameter1=value1&parameter2&parameter3=&parameter4=value4``
 
 ## Basic Usage
 
 ### Get
 
-The following ``Get`` examples will use the example query string ``#parameter1=value1&parameter2&parameter3=&parameter4=value4``
+The following ``Get`` examples will use the example hash parameter query string ``#parameter1=value1&parameter2&parameter3=&parameter4=value4``
 
 ```js
 HashParameters.get('parameter1');
