@@ -28,17 +28,17 @@ HashParameters.get('parameter3');
 ### Set
 
 ```js
-HashParameters.set('parameter1','value1');
+HashParameters.set('parameter1', 'value1');
 > https://example.com/test#parameter1=value1
 ```
 
 ```js
-HashParameters.set('parameter2',null);
+HashParameters.set('parameter2', null);
 > https://example.com/test#parameter1=value1&parameter2
 ```
 
 ```js
-HashParameters.set('parameter3','');
+HashParameters.set('parameter3', '');
 > https://example.com/test#parameter1=value1&parameter2&parameter3=
 ```
 
