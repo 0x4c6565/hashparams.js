@@ -42,6 +42,16 @@ HashParameters.set('parameter3', '');
 > https://example.com/test#parameter1=value1&parameter2&parameter3=
 ```
 
+```js
+HashParameters.set('parameter3', '');
+> https://example.com/test#parameter1=value1&parameter2&parameter3=
+```
+
+```js
+HashParameters.set('parameter4', 'dfg$!');
+> https://example.com/test#parameter1=value1&parameter2&parameter3=&parameter4=dfg%24!
+```
+
 ### Unset
 
 The following ``Unset`` examples will use the uri ``https://example.com/test#parameter1=value1&parameter2&parameter3=&parameter4=value4``
