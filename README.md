@@ -8,7 +8,7 @@ A simple library for getting/setting/unsetting query-string style format hash pa
 
 ### Get
 
-The following ``Get`` examples will use the example hash parameter query string ``#parameter1=value1&parameter2&parameter3=&parameter4=value4``
+The following ``Get`` examples will use the uri ``https://example.com/test#parameter1=value1&parameter2&parameter3=&parameter4=value4``
 
 ```js
 HashParameters.get('parameter1');
@@ -29,15 +29,24 @@ HashParameters.get('parameter3');
 
 ```js
 HashParameters.set('parameter1','value1');
-> example.com/test#parameter1=value1
+> https://example.com/test#parameter1=value1
 ```
 
 ```js
 HashParameters.set('parameter2',null);
-> example.com/test#parameter2
+> https://example.com/test#parameter1=value1&parameter2
 ```
 
 ```js
 HashParameters.set('parameter3','');
-> example.com/test#parameter3=
+> https://example.com/test#parameter1=value1&parameter2&parameter3=
+```
+
+### Unset
+
+The following ``Unset`` examples will use the uri ``https://example.com/test#parameter1=value1&parameter2&parameter3=&parameter4=value4``
+
+```js
+HashParameters.unset('parameter2');
+> https://example.com/test#parameter1=value1&parameter3=&parameter4=value4
 ```
