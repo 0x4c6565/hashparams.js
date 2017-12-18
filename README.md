@@ -63,5 +63,15 @@ The following ``Unset`` examples will use the uri ``https://example.com/test#par
 
 ```js
 HashParameters.unset('parameter2');
-> https://example.com/test#parameter1=value1&parameter3=&parameter4=value4
+> https://example.com/test#parameter1=value1&parameter3=
+```
+
+```js
+HashParameters.unset('parameter1');
+> https://example.com/test#parameter3=
+```
+
+```js
+HashParameters.unset('parameter3');
+> https://example.com/test#
 ```
