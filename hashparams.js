@@ -15,18 +15,14 @@ var HashParameters = {
         }
     },
     get: function(key) {
-        if (this.hashParams[key] !== undefined) {
-            return this.hashParams[key];
-        }
-
-        return null;
+        return this.hashParams[key];
     },
     set: function(key, value) {
         this.hashParams[key] = value;
         this.commit();
     },
     unset: function(key) {
-        if (this.get(key) !== null) {
+        if (this.get(key) !== undefined) {
             delete this.hashParams[key];
         }
 
